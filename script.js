@@ -16,7 +16,7 @@ elements.forEach(element => {
         const text = element.getAttribute('data-text');
 
         popupName.textContent = name;
-        popupText.textContent = text;
+        popupText.textContent = text.replace(/\\n/g, '\n');
 
         // 🛑 Geen popup als er geen data is
         if (!name && !text) return;
